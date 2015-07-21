@@ -1,14 +1,14 @@
 {
-  "system": true,
+  "system": false,
   "resident": true,
 
   // This a workaround for https://github.com/vert-x/mod-lang-jython/issues/7 due classloader issues
   // in Jython
   "load-resources-with-tccl": true,
 
-  "description":"Python language implementation module for Vert.x - uses Jython as the Python engine",
+  "description":"Python language implementation module for Vert.x - uses Jython 2.7 as the Python engine",
   "licenses": ["The Apache Software License Version 2.0"],
-  "author": "purplefox",
+  "author": "jayv",
   "keywords": ["python", "jython", "scripting", "language"],
-  "homepage": "https://github.com/vert-x/mod-lang-jython"
+  "homepage": "https://github.com/jayv/mod-lang-jython"
 }

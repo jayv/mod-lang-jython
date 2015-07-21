@@ -35,9 +35,9 @@ configurations {
 }
 
 repositories {
-  flatDir {
-    dirs 'extralibs'
-  }
+  //flatDir {
+    // dirs 'extralibs'
+  //}
   if (System.getenv("VERTX_DISABLE_MAVENLOCAL") == null) {
     // We don't want to use mavenLocal when running on CI - mavenLocal is only useful in Gradle for
     // publishing artifacts locally for development purposes - maven local is also not threadsafe when there
@@ -49,10 +49,14 @@ repositories {
 }
 
 dependencies {
-  compile "io.vertx:jython-standalone:$jythonVersion"
+  compile "org.python:jython-standalone:$jythonVersion"
 
-  provided "io.vertx:vertx-core:$vertxVersion"
-  provided "io.vertx:vertx-platform:$vertxVersion"
+  provided("io.vertx:vertx-core:$vertxVersion") {
+    exclude group: 'com.hazelcast', module: 'hazelcast'
+  }
+  provided("io.vertx:vertx-platform:$vertxVersion") {
+    exclude group: 'com.hazelcast', module: 'hazelcast'
+  }
 
   testCompile( "io.vertx:vertx-testframework:$testFrameworkVersion" ) {
     transitive = false
