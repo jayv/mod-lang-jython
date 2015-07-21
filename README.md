@@ -2,7 +2,7 @@
 
 This project builds a Vert.x module which implements Python Vert.x API support using Jython.
 
-_This version is based on *2.0.0-final* as used by *Vert.x 2.1M1* and has been patched to run with the recently released *Jython 2.7 runtime*_
+_This version is based on *2.0.0-final* as used by *Vert.x 2.1M5* and has been patched to run with the recently released *Jython 2.7 runtime*_
 
 To build/install run ```./gradlew install``` this builds and installs the module to your local maven repository.
 
