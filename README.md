@@ -6,7 +6,8 @@ _This version is based on *2.0.0-final* as used by *Vert.x 2.1M1* and has been p
 
 To build/install run ```./gradlew install``` this builds and installs the module to your local maven repository.
 
-On the application side add a ```langs.properties``` file in ```src/main/resources/platform_lib``` with (or adjusted for your languages) 
+Your application ```mod.json``` should include: ```com.livefyre~lang-jython~2.0.0-jython27```
+and also add a ```langs.properties``` file under ```src/main/resources/platform_lib``` with (or adjusted for your languages) 
 ``` 
 rhino=io.vertx~lang-rhino~2.0.0-final:org.vertx.java.platform.impl.RhinoVerticleFactory
 jruby=io.vertx~lang-jruby~2.0.0-final:org.vertx.java.platform.impl.JRubyVerticleFactory
